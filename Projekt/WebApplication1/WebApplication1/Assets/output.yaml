@@ -1,0 +1,190 @@
+- Symbol: BTC-USD
+  Name: Bitcoin USD
+  Price (Intraday): 27,921.96
+  Change: -101.17
+  '% Change': -0.36%
+  Market Cap: 540.056B
+  Volume in Currency (Since 0:00 UTC): 10.068B
+  Volume in Currency (24Hr): 10.068B
+  Total Volume All Currencies (24Hr): 10.068B
+  Circulating Supply: 19.342M
+- Symbol: ETH-USD
+  Name: Ethereum USD
+  Price (Intraday): 1,838.81
+  Change: -29.01
+  '% Change': -1.55%
+  Market Cap: 221.499B
+  Volume in Currency (Since 0:00 UTC): 5.859B
+  Volume in Currency (24Hr): 5.859B
+  Total Volume All Currencies (24Hr): 5.859B
+  Circulating Supply: 120.458M
+- Symbol: USDT-USD
+  Name: Tether USD
+  Price (Intraday): 1.0004
+  Change: 0
+  '% Change': 0.00%
+  Market Cap: 80.240B
+  Volume in Currency (Since 0:00 UTC): 18.796B
+  Volume in Currency (24Hr): 18.796B
+  Total Volume All Currencies (24Hr): 18.796B
+  Circulating Supply: 80.211B
+- Symbol: BNB-USD
+  Name: BNB USD
+  Price (Intraday): 310.8
+  Change: -1.55
+  '% Change': -0.50%
+  Market Cap: 49.072B
+  Volume in Currency (Since 0:00 UTC): 460.394M
+  Volume in Currency (24Hr): 460.394M
+  Total Volume All Currencies (24Hr): 460.394M
+  Circulating Supply: 157.887M
+- Symbol: USDC-USD
+  Name: USD Coin USD
+  Price (Intraday): 0.9997
+  Change: -0.0001
+  '% Change': -0.01%
+  Market Cap: 32.592B
+  Volume in Currency (Since 0:00 UTC): 2.389B
+  Volume in Currency (24Hr): 2.389B
+  Total Volume All Currencies (24Hr): 2.389B
+  Circulating Supply: 32.6B
+- Symbol: XRP-USD
+  Name: XRP USD
+  Price (Intraday): 0.502372
+  Change: -0.007247
+  '% Change': -1.42%
+  Market Cap: 25.967B
+  Volume in Currency (Since 0:00 UTC): 565.59M
+  Volume in Currency (24Hr): 565.59M
+  Total Volume All Currencies (24Hr): 565.59M
+  Circulating Supply: 51.688B
+- Symbol: ADA-USD
+  Name: Cardano USD
+  Price (Intraday): 0.3888
+  Change: 0.0011
+  '% Change': 0.002807
+  Market Cap: 13.517B
+  Volume in Currency (Since 0:00 UTC): 197.578M
+  Volume in Currency (24Hr): 197.578M
+  Total Volume All Currencies (24Hr): 197.578M
+  Circulating Supply: 34.762B
+- Symbol: HEX-USD
+  Name: HEX USD
+  Price (Intraday): 0.0711
+  Change: 0.0011
+  '% Change': 0.015203
+  Market Cap: 12.336B
+  Volume in Currency (Since 0:00 UTC): 6.016M
+  Volume in Currency (24Hr): 6.016M
+  Total Volume All Currencies (24Hr): 6.016M
+  Circulating Supply: 173.411B
+- Symbol: DOGE-USD
+  Name: Dogecoin USD
+  Price (Intraday): 0.0834
+  Change: 0.0002
+  '% Change': 0.25%
+  Market Cap: 11.582B
+  Volume in Currency (Since 0:00 UTC): 489.325M
+  Volume in Currency (24Hr): 489.325M
+  Total Volume All Currencies (24Hr): 489.325M
+  Circulating Supply: 138.868B
+- Symbol: STETH-USD
+  Name: Lido Staked ETH USD
+  Price (Intraday): 1,820.71
+  Change: -35.33
+  '% Change': -1.90%
+  Market Cap: 10.798B
+  Volume in Currency (Since 0:00 UTC): 44.878M
+  Volume in Currency (24Hr): 44.878M
+  Total Volume All Currencies (24Hr): 44.878M
+  Circulating Supply: 5.931M
+- Symbol: MATIC-USD
+  Name: Polygon USD
+  Price (Intraday): 1.0911
+  Change: -0.0226
+  '% Change': -2.03%
+  Market Cap: 9.999B
+  Volume in Currency (Since 0:00 UTC): 161.52M
+  Volume in Currency (24Hr): 161.52M
+  Total Volume All Currencies (24Hr): 161.52M
+  Circulating Supply: 9.164B
+- Symbol: SOL-USD
+  Name: Solana USD
+  Price (Intraday): 20.14
+  Change: -0.34
+  '% Change': -1.64%
+  Market Cap: 7.812B
+  Volume in Currency (Since 0:00 UTC): 198.203M
+  Volume in Currency (24Hr): 198.203M
+  Total Volume All Currencies (24Hr): 198.203M
+  Circulating Supply: 387.939M
+- Symbol: DOT-USD
+  Name: Polkadot USD
+  Price (Intraday): 6.14
+  Change: -0.07
+  '% Change': -1.14%
+  Market Cap: 7.212B
+  Volume in Currency (Since 0:00 UTC): 125.593M
+  Volume in Currency (24Hr): 125.593M
+  Total Volume All Currencies (24Hr): 125.593M
+  Circulating Supply: 1.174B
+- Symbol: BUSD-USD
+  Name: Binance USD USD
+  Price (Intraday): 0.999823
+  Change: -0.000152
+  '% Change': -0.02%
+  Market Cap: 7.069B
+  Volume in Currency (Since 0:00 UTC): 2.535B
+  Volume in Currency (24Hr): 2.535B
+  Total Volume All Currencies (24Hr): 2.535B
+  Circulating Supply: 7.07B
+- Symbol: WTRX-USD
+  Name: Wrapped TRON USD
+  Price (Intraday): 0.066049
+  Change: -0.000374
+  '% Change': -0.56%
+  Market Cap: 6.716B
+  Volume in Currency (Since 0:00 UTC): 307,261
+  Volume in Currency (24Hr): 307,261
+  Total Volume All Currencies (24Hr): 307,261
+  Circulating Supply: 101.676B
+- Symbol: LTC-USD
+  Name: Litecoin USD
+  Price (Intraday): 89.52
+  Change: -0.91
+  '% Change': -1.00%
+  Market Cap: 6.505B
+  Volume in Currency (Since 0:00 UTC): 343.45M
+  Volume in Currency (24Hr): 343.45M
+  Total Volume All Currencies (24Hr): 343.45M
+  Circulating Supply: 72.668M
+- Symbol: SHIB-USD
+  Name: Shiba Inu USD
+  Price (Intraday): 0
+  Change: 0
+  '% Change': -0.08%
+  Market Cap: 6.446B
+  Volume in Currency (Since 0:00 UTC): 123.667M
+  Volume in Currency (24Hr): 123.667M
+  Total Volume All Currencies (24Hr): 123.667M
+  Circulating Supply: 589.542T
+- Symbol: TRX-USD
+  Name: TRON USD
+  Price (Intraday): 0.0662
+  Change: -0.0004
+  '% Change': -0.54%
+  Market Cap: 6.013B
+  Volume in Currency (Since 0:00 UTC): 153.535M
+  Volume in Currency (24Hr): 153.535M
+  Total Volume All Currencies (24Hr): 153.535M
+  Circulating Supply: 90.9B
+- Symbol: AVAX-USD
+  Name: Avalanche USD
+  Price (Intraday): 17.35
+  Change: -0.3
+  '% Change': -1.70%
+  Market Cap: 5.660B
+  Volume in Currency (Since 0:00 UTC): 93.017M
+  Volume in Currency (24Hr): 93.017M
+  Total Volume All Currencies (24Hr): 93.017M
+  Circulating Supply: 326.143M
