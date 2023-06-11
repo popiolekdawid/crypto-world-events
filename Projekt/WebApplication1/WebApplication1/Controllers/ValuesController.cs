@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using MySqlConnector;
+using System.Data;
 using System.Xml;
 
 namespace WebApplication1.Controllers
@@ -17,28 +19,49 @@ namespace WebApplication1.Controllers
             // odczyt danych z wykorzystaniem DOM
             Console.WriteLine("XML loaded by DOM Approach");
             var result = XMLReadWithDOMApproach.Read(xmlpath);
-            
-            using (var dbContext = new MyDbContext())
+            string connectionString = "Server=localhost;Database=ethereum;Uid=root;Pwd=;";
+
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
-                dbContext.Prices.ExecuteDelete();
-                for (int i = 0; i < result.GetLength(0); i++)
+                connection.Open();
+
+                IsolationLevel isolationLevel = IsolationLevel.Serializable; 
+                using (MySqlTransaction transaction = connection.BeginTransaction(isolationLevel))
                 {
-                    var myTable = new Price
+                    try
                     {
-                        date = result[i, 0],
-                        price = result[i, 1]
-                    };
+                        using (var dbContext = new MyDbContext())
+                        {
+
+                            dbContext.Prices.ExecuteDelete();
+                            for (int i = 0; i < result.GetLength(0); i++)
+                            {
+                                var myTable = new Price
+                                {
+                                    date = result[i, 0],
+                                    price = result[i, 1]
+                                };
 
 
-                    dbContext.Prices.Add(myTable);
+                                dbContext.Prices.Add(myTable);
+                            }
+                            dbContext.SaveChanges();
+                        }
+                        transaction.Commit();
+                        Console.WriteLine("Transaction successfull.");
+                    }
+                    catch (Exception ex)
+                    {
+                        transaction.Rollback();
+                        Console.WriteLine("Transaction rolled back");
+                    }
                 }
-
-
-                dbContext.SaveChanges();
             }
+           
             string[][] jaggedArray = ConvertToJaggedArray(result);
             string xml = SerializeToXml(jaggedArray);
-
+            System.IO.File.WriteAllText("/xampp/htdocs/Projekt/WebApplication1/WebApplication1/Assets/output.xml", xml);
+            Console.WriteLine("XML exported successfully.");
 
             return 202;
         }

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Xml;
 using System.Xml.Serialization;
 using Microsoft.EntityFrameworkCore;
+using MySqlConnector;
 using Pomelo.EntityFrameworkCore.MySql;
 
 namespace WebApplication1
@@ -23,7 +24,9 @@ namespace WebApplication1
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            //Tutaj zmieniamy dostepnosc do bazy
             optionsBuilder.UseMySql("Server=localhost;Database=ethereum;Uid=root;Pwd=;", new MySqlServerVersion(new Version(8, 0, 26)));
+                
         }
     }
     public class RequestModel
@@ -35,38 +38,19 @@ namespace WebApplication1
 
         public static void Main(string[] args)
         {
-           
+
             var builder = WebApplication.CreateBuilder(args);
-
-            // Add services to the container.
-
-            builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-            builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
-
+            var startup = new Startup(builder.Configuration);
+            startup.ConfigureServices(builder.Services);
             var app = builder.Build();
-
-            // Configure the HTTP request pipeline.
-            if (app.Environment.IsDevelopment())
-            {
-                app.UseSwagger();
-                app.UseSwaggerUI();
-            }
-
-            app.UseHttpsRedirection();
-
-            app.UseAuthorization();
-
-
-            app.MapControllers();
-
+            startup.Configure(app);
             app.Run();
 
 
 
-          
+
+
         }
-       
+
     }
 }

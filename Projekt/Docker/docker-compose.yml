@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  app:
+    container_name: myfirst_dockerized_rest_server
+    build:
+      dockerfile: rest_api/Dockerfile
+      context: .
+    volumes:
+      - ./rest_api:/var/www/html
+    ports:
+      - "8001:80"
+    depends_on:
+      - db
+
+  db:
+    container_name:  myfirst_dockerized_database_server
+    image: mysql
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "true"
+    command: --default-authentication-plugin=mysql_native_password
+    volumes:
+      - ./db_dumps/ethereum-future.sql:/docker-entrypoint-initdb.d/ethereum-future.sql

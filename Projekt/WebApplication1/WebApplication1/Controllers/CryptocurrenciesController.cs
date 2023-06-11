@@ -21,7 +21,7 @@ namespace WebApplication1.Controllers
         .Build();
             var deserializedObject = deserializer.Deserialize<object>(jsonContent);
 
-            // Serialize to YAML
+            // Do YAML
             var serializer = new SerializerBuilder()
                 .Build();
             var yaml = serializer.Serialize(deserializedObject);
@@ -29,7 +29,7 @@ namespace WebApplication1.Controllers
             string yamlFilePath = Path.Combine(Directory.GetCurrentDirectory(), "Assets", "output.yaml");
             System.IO.File.WriteAllText(yamlFilePath, yaml);
 
-            // Return the YAML content as the response
+            // Zwracanie JSON jako odpowiedz
             return Content(jsonContent, "application/json");
         }
     }
