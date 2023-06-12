@@ -79,7 +79,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo "Authentication failed. Please check your username and password.";
     }
     ini_set('display_errors', 1);
-    
+   
+        $mysqli = new mysqli("localhost", "root", "", "ethereum");
+        $sql = 'SELECT * FROM allcrypto';
+        if ($result = $mysqli->query($sql)) {
+            while ($data = mysqli_fetch_array($result)) {
+                $users[] = $data;
+            }
+        }
+        if (is_array($users) || is_object($users))
+        {   
+            echo "<h2>2021 Prices</h2>";
+            echo "<table>";
+            echo "<th>Name</th><th>Symbol</th><th>Price (Intraday)</th><th>Change</th><th>% Change</th><th>Market Cap</th><th>Circulating Supply</th>";
+            foreach ($users as $user) {
+                echo "<tr>";
+                echo  "<td>".$user['Name']. "</td><td> " . $user['Symbol']."</td><td> ". $user['Price (Intraday)']."</td><td> ". $user['Change']."</td><td> ". $user['% Change']."</td><td> ". $user['Market Cap'] . "</td><td> " . $user['Circulating Supply']. "</td>";
+            
+                echo "<tr>";
+            }
+            echo "</table>";
+        } 
     
 }
 ?>
